@@ -10,10 +10,10 @@ import {
     Icon,
     IconButton,
     createIcon,
-    IconProps,
     useColorModeValue,
   } from '@chakra-ui/react';
-  
+
+
   export const Hero = () => {
     return (
       <Container maxW={"7xl"}>
@@ -40,7 +40,7 @@ import {
                 fontSize="60"
                 bottom="15px"
               >
-                Veterinaria
+                VETERINARIA
               </Text>
             </Heading>
             <Stack
@@ -120,7 +120,7 @@ import {
                 bg={"#a742ad"}
                 _hover={{ bg: "#791b7e" }}
               >
-                Donar
+                Ayudar
               </Button>
               <Image
                 alt={"Hero Image"}
@@ -133,7 +133,7 @@ import {
                 }
               />
               <Image
-                alt={"Hero Image2"}
+                alt={"Hero Image"}
                 fit={"cover"}
                 align={"center"}
                 w={"50%"}
