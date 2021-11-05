@@ -80,7 +80,7 @@ export const Footer = () => {
           </Stack>
 
           <Stack align={"flex-start"}>
-            <ListHeader>Install App</ListHeader>
+            <ListHeader></ListHeader>
           </Stack>
         </SimpleGrid>
       </Container>
@@ -99,7 +99,7 @@ export const Footer = () => {
           justify={{ md: "space-between" }}
           align={{ md: "center" }}
         >
-          <Text>© 2020 Chakra Templates. All rights reserved</Text>
+          <Text>© 2021 Veterinaria Sigismondi - Julian Arrebola</Text>
           <Stack direction={"row"} spacing={6}>
             <SocialButton label={"Twitter"} href={"#"}>
               <FaTwitter />
