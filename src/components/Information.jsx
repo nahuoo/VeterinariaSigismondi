@@ -16,11 +16,11 @@ export const Information = () => (
     <Box maxW="3xl" mx="auto" px={{ base: "6", md: "8" }} pt="12" pb="16">
       <Flex direction="column" align="center" textAlign="center">
         <Text fontSize={{ base: "xl", md: "2xl" }} fontWeight="medium" mt="6">
-          &ldquo;Hacemos hasta lo imposible por preservar la unión entre nuestros compañeros y sus tutores, 
+          &ldquo;Hacemos hasta lo imposible por preservar la salud de todas las mascotas que lleguen a nuestra clinica,
           junto con nuestro banco de sangre podemos tratar a tiempo los animales críticos.&rdquo;
         </Text>
         <Quotee
-          name="Andrés Sigismondi"
+          name="Andréa Sigismondi"
           jobTitle="Médico Veterinario"
           imageSrc="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixid=MXwxMjA3fDB8MHxzZWFyY2h8OTN8fGxhZHklMjBoZWFkc2hvdCUyMHNtaWxpbmd8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60"
           mt="8"

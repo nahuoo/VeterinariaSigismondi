@@ -21,46 +21,44 @@ export const Prices = () => (
     >
       <PricingCard
         data={{
-          name: "Internación",
+          name: "Vacunación",
           features: [
-            "Cirujias",
-            "Anestesia",
-            "Observación",
-            "Cuidado",
+            "Prevención",
+            "Antiparasitos",
+            "Anti-rabica",
           ],
         }}
         icon={SiMicrosoft}
         button={
           <ActionButton variant="outline" borderWidth="2px">
-            Action
+          Solicitar Turno
           </ActionButton>
         }
       />
       <PricingCard
         zIndex={1}
         isPopular
-        transform={{ lg: "scale(1.05)" }}
+        transform={{ lg: "scale(1.00)" }}
         data={{
-          name: "Vacunación",
+          name: "Internación",
           features: [
-            "Prevención",
-            "Antiparasitos",
-            "Rabia",
-            "Vacunas",
-            "hola",
+            "Cirujias",
+            "Anestesia",
+            "Observación",
+            "Cuidado",
+          
           ],
         }}
         icon={SiHive}
-        button={<ActionButton>Comprar?</ActionButton>}
+        button={<ActionButton>Mas información...</ActionButton>}
       />
       <PricingCard
         data={{
-          name: "Algo mas",
+          name: "Intervenciones",
           features: [
-            "asdasda",
-            "asdasd",
-            "sasdasdas",
-            "asdasdasd",
+            "Cirujuas",
+            "Transfuciónes",
+            "Banco de Sangre",
           ],
         }}
         icon={SiMarketo}

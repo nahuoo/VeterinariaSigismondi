@@ -258,44 +258,50 @@ const NAV_ITEMS = [
     children: [
       {
         label: "¿Quienes Somos?",
-        subLabel: "pipiri papu",
-        href: "nosotros",
+        subLabel: "",
+        href: "",
       },
       {
         label: "Nuestros Servicios",
         subLabel: "Los servicios que brindamos",
-        href: "index",
+        href: "",
       },
     ],
   },
   {
     route: "",
     label: "Ubicación",
-    href: "https://www.google.com.ar/maps/dir//Chaco+801,+B7600BKQ+Mar+del+Plata,+Buenos+Aires,+Argentina/@-37.982938,-57.5634771,16z/data=!3m1!4b1!4m9!4m8!1m0!1m5!1m1!1s0x9584d95a18c9fcd9:0x9d2f9ec1205da2e9!2m2!1d-57.5590997!2d-37.9829465!3e2",
-  },
+    children: [
+      {
+        label: "Constitución al 7124",
+        subLabel: "Sucursal",
+        href: "https://www.google.com.ar/maps/place/Av.+Constituci%C3%B3n+7124,+B7604+Mar+del+Plata,+Provincia+de+Buenos+Aires/@-37.954943,-57.5772477,17z/data=!3m1!4b1!4m5!3m4!1s0x9584d998bd01eb51:0xdc3303935ab800bb!8m2!3d-37.9549473!4d-57.575059",
+      }
+    ]
+    },
   {
     route: "",
     label: "Contacto",
     children: [
       {
         label: "Teléfono",
-        subLabel: "Llamar a (0223)473-9018",
-        href: "tel:02234739018",
+        subLabel: "Llamar a 0223 471-1434",
+        href: "https://www.google.com.ar/maps/place/Av.+Constituci%C3%B3n+7124,+B7604+Mar+del+Plata,+Provincia+de+Buenos+Aires/@-37.954943,-57.5772477,17z/data=!3m1!4b1!4m5!3m4!1s0x9584d998bd01eb51:0xdc3303935ab800bb!8m2!3d-37.9549473!4d-57.575059",
       },
       {
         label: "Celular",
-        subLabel: "Llamar al (0223)156-800944",
-        href: "tel:5492236800944",
+        subLabel: "Llamar al 0223 156218890",
+        href: "tel:0223156218890",
       },
       {
         label: "WhatsApp",
-        subLabel: "Enviar mensaje al (0223)156-800944",
+        subLabel: "Enviar mensaje al 0223 156218890",
         href: "https://api.whatsapp.com/send?phone=5492236800944",
       },
       {
         label: "Email",
-        subLabel: "Escribinos a unoelectromedicina@gmail.com",
-        href: "mailto:unoelectromedicina@gmail.com",
+        subLabel: "Escribinos a veterinariasigismondi@gmail.com ",
+        href: "veterinariasigismondi@gmail.com ",
       },
     ],
   },
@@ -306,12 +312,12 @@ const NAV_ITEMS = [
       {
         label: "Donacion",
         subLabel: "Ayudanos realizando donaciones de sangre",
-        href: "#",
+        href: "",
       },
       {
         label: "Nuestros Donantes",
-        subLabel: "Mira mira una conexion a la base de datos",
-        href: "#",
+        subLabel: "Ver las donaciones realizadas",
+        href: "",
       },
     ],
   },
