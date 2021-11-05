@@ -1,17 +1,15 @@
 import {
-  Flex,
   Heading,
   Icon,
   List,
   ListIcon,
   ListItem,
-  Text,
   useColorModeValue,
   VStack,
 } from '@chakra-ui/react'
 import * as React from 'react'
 import { HiCheckCircle } from 'react-icons/hi'
-import { Card, CardProps } from './Card'
+import { Card } from './Card'
 
 export const PricingCard = (props) => {
   const { data, icon, button, ...rest } = props

@@ -5,10 +5,8 @@ import {
   HStack,
   Text,
   useColorModeValue,
-  BoxProps,
   Img,
 } from "@chakra-ui/react";
-import { createIcon } from "@chakra-ui/react";
 import * as React from "react";
 
 export const Information = () => (
