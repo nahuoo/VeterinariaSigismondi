@@ -16,134 +16,130 @@ import {
   
   export const Hero = () => {
     return (
-      <Container maxW={'7xl'}>
+      <Container maxW={"7xl"}>
         <Stack
-          align={'center'}
+          align={"center"}
           spacing={{ base: 8, md: 10 }}
           py={{ base: 20, md: 28 }}
-          direction={{ base: 'column', md: 'row' }}>
-          <Stack flex={1} spacing={{ base: 5, md: 10 }}>
+          direction={{ base: "column", md: "row" }}
+        >
+          <Stack flex={1} spacing={{ base: 5, md: 5 }} pl={{ base: 5, md: 20 }}>
             <Heading
-              lineHeight={1.1}
-              fontWeight={600}
-              fontSize={{ base: '3xl', sm: '4xl', lg: '6xl' }}>
-              <Text
-                as={'span'}
-                position={'relative'}
-                fontFamily="serif"
-                _after={{
-                  content: "''",
-                  width: 'full',
-                  height: '3%',
-                  position: 'absolute',
-                  bottom: 1,
-                  left: 0,
-                  bg: '#a742ad',
-                  zIndex: -1,
-                }}>
-                  Clínica Sigismondi
+              lineHeight={1.3}
+              fontWeight={450}
+              fontSize={{ base: "3xl", sm: "4xl", lg: "6xl" }}
+            >
+              <Text as={"span"} position={"relative"}>
+                Clínica
               </Text>
               <br />
-              <Text as={'span'} 
-              position={'relative'}
-              color="#a742ad" fontFamily="serif" fontSize="40" bottom="15px" >
-                Veterinaria Especializada
+              <Text
+                as={"span"}
+                position={"relative"}
+                color="#a742ad"
+                fontSize="60"
+                bottom="15px"
+              >
+                VETERINARIA
               </Text>
             </Heading>
-            <Text color={'gray.500'} fontFamily="timesnewromans">
-            Con 15 años de trayectoria nos dedicamos al cuidado integral de la mascota de compañía, desde el cuidado y crianza del cachorro, hasta los cuidados intensivos de la mascota en estado crítico, como así también a la medicina transfusional de caninos y felinos.
-            </Text>
             <Stack
               spacing={{ base: 4, sm: 6 }}
-              direction={{ base: 'column', sm: 'row' }}>
+              direction={{ base: "column", sm: "row" }}
+            >
               <Button
-                rounded={'full'}
-                size={'lg'}
-                fontWeight={'normal'}
+                rounded={"full"}
+                size={"lg"}
+                fontWeight={"normal"}
                 px={6}
-                colorScheme={'red'}
-                bg={'#a742ad'}
-                _hover={{ bg: '#4a33dc' }}>
+                colorScheme={"red"}
+                bg={"#a742ad"}
+                _hover={{ bg: "#791b7e" }}
+              >
                 Ayudar
               </Button>
               <Button
-                rounded={'full'}
-                size={'lg'}
-                fontWeight={'normal'}
+                rounded={"full"}
+                size={"lg"}
+                fontWeight={"normal"}
                 px={6}
-                leftIcon={<PlayIcon h={4} w={4} color={'gray.300'} />}>
-                How It Works
+                leftIcon={<PlayIcon h={4} w={4} color={"gray.300"} />}
+              >
+                PetShop
               </Button>
             </Stack>
           </Stack>
           <Flex
             flex={1}
-            justify={'center'}
-            align={'center'}
-            position={'relative'}
-            w={'full'}>
+            justify={"center"}
+            align={"center"}
+            position={"relative"}
+            w={"full"}
+          >
             <Blob
-              w={'150%'}
-              h={'150%'}
-              position={'absolute'}
-              top={'-20%'}
+              w={"150%"}
+              h={"150%"}
+              position={"absolute"}
+              top={"-20%"}
               left={0}
               zIndex={-1}
-              color={useColorModeValue('red.50', 'red.400')}
+              color={useColorModeValue("pink.100", "red.40")}
             />
             <Box
-              position={'relative'}
-              height={'300px'}
-              rounded={'2xl'}
-              boxShadow={'2xl'}
-              width={'full'}
-              overflow={'hidden'}>
+              position={"relative"}
+              height={"300px"}
+              rounded={"2xl"}
+              boxShadow={"2xl"}
+              width={"full"}
+              overflow={"hidden"}
+            >
               <IconButton
-                aria-label={'Play Button'}
-                variant={'ghost'}
-                _hover={{ bg: 'transparent' }}
+                aria-label={"Play Button"}
+                variant={"ghost"}
+                _hover={{ bg: "transparent" }}
                 icon={<PlayIcon w={12} h={12} />}
-                size={'lg'}
-                color={'white'}
-                position={'absolute'}
-                left={'50%'}
-                top={'50%'}
-                transform={'translateX(-50%) translateY(-50%)'}
+                size={"lg"}
+                color={"white"}
+                position={"absolute"}
+                left={"50%"}
+                top={"50%"}
+                transform={"translateX(-50%) translateY(-50%)"}
               />
               <Button
-                variant={'ghost'}
-                position={'absolute'}
-                left={'50%'}
-                top={'50%'}
-                color={'white'}
-                transform={'translateX(-50%) translateY(-50%)'}
-                rounded={'full'}
-                size={'lg'}
-                fontWeight={'normal'}
+                variant={"ghost"}
+                position={"absolute"}
+                left={"50%"}
+                top={"50%"}
+                color={"white"}
+                transform={"translateX(-50%) translateY(-50%)"}
+                rounded={"full"}
+                size={"lg"}
+                fontWeight={"normal"}
                 px={6}
-                colorScheme={'red'}
-                bg={'#a742ad'}
-                _hover={{ bg: '#4a33dc' }}>
+                colorScheme={"red"}
+                bg={"#a742ad"}
+                _hover={{ bg: "#791b7e" }}
+              >
                 Ayudar
               </Button>
               <Image
-                alt={'Hero Image'}
-                fit={'cover'}
-                align={'center'}
-                w={'50%'}
-                h={'100%'}
+                alt={"Hero Image"}
+                fit={"cover"}
+                align={"center"}
+                w={"50%"}
+                h={"100%"}
                 src={
-                  'https://scontent.faep29-2.fna.fbcdn.net/v/t39.30808-6/244747671_6723526087719316_2708944382307389881_n.jpg?_nc_cat=107&ccb=1-5&_nc_sid=8bfeb9&_nc_ohc=YKUcn60LzsIAX8sCuRC&_nc_ht=scontent.faep29-2.fna&oh=f604df796a1482569fe6bb8b2c504bfb&oe=6186DD42'
+                  "https://scontent.faep29-2.fna.fbcdn.net/v/t39.30808-6/244747671_6723526087719316_2708944382307389881_n.jpg?_nc_cat=107&ccb=1-5&_nc_sid=8bfeb9&_nc_ohc=YKUcn60LzsIAX8sCuRC&_nc_ht=scontent.faep29-2.fna&oh=f604df796a1482569fe6bb8b2c504bfb&oe=6186DD42"
                 }
               />
-               <Image
-                alt={'Hero Image'}
-                fit={'cover'}
-                align={'center'}
-                w={'50%'}
-                h={'100%'}
+              <Image
+                alt={"Hero Image"}
+                fit={"cover"}
+                align={"center"}
+                w={"50%"}
+                h={"100%"}
                 src={
-                  'https://scontent.faep29-2.fna.fbcdn.net/v/t39.30808-6/244747671_6723526087719316_2708944382307389881_n.jpg?_nc_cat=107&ccb=1-5&_nc_sid=8bfeb9&_nc_ohc=YKUcn60LzsIAX8sCuRC&_nc_ht=scontent.faep29-2.fna&oh=f604df796a1482569fe6bb8b2c504bfb&oe=6186DD42'
+                  "https://scontent.faep29-2.fna.fbcdn.net/v/t39.30808-6/244747671_6723526087719316_2708944382307389881_n.jpg?_nc_cat=107&ccb=1-5&_nc_sid=8bfeb9&_nc_ohc=YKUcn60LzsIAX8sCuRC&_nc_ht=scontent.faep29-2.fna&oh=f604df796a1482569fe6bb8b2c504bfb&oe=6186DD42"
                 }
               />
             </Box>

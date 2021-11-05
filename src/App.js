@@ -1,10 +1,10 @@
 import React,{Component} from 'react';
 import './assets/css/App.css';
-import {Hero} from './components/hero'
 import { Home } from './routes/Home'
 import {Navbar} from './components/Navbar'
 import { About } from './routes/About';
-import {Routes, Route, Link } from 'react-router-dom'
+import {Routes, Route } from 'react-router-dom'
+import { Footer } from './components/Footer';
 
 class App extends Component{
   render(){
@@ -15,6 +15,7 @@ class App extends Component{
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
         </Routes>
+        <Footer />
       </div>    
   )
   }
