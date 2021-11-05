@@ -10,8 +10,4 @@ export const Home = () => {
       <Prices />
     </>
   )
-<<<<<<< Updated upstream
 }
-=======
-}
->>>>>>> Stashed changes
