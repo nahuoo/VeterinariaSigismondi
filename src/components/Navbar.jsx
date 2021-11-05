@@ -5,7 +5,6 @@ import {
   Flex,
   Text,
   IconButton,
-  Button,
   Stack,
   Collapse,
   Icon,
@@ -13,7 +12,6 @@ import {
   PopoverTrigger,
   PopoverContent,
   useColorModeValue,
-  useBreakpointValue,
   useDisclosure,
   Image,
 } from '@chakra-ui/react'
@@ -23,6 +21,8 @@ import {
   ChevronDownIcon,
   ChevronRightIcon,
 } from '@chakra-ui/icons'
+import { FaFacebook } from 'react-icons/fa'
+import { AiFillInstagram } from 'react-icons/ai'
 
 export const Navbar = () => {
   const { isOpen, onToggle } = useDisclosure()
@@ -30,31 +30,36 @@ export const Navbar = () => {
   return (
     <Box pos="fixed" boxShadow="base" w="100%" zIndex={2}>
       <Flex
-        bg={useColorModeValue('white', 'gray.800')}
-        color={useColorModeValue('gray.600', 'white')}
-        minH={'60px'}
+        bg={useColorModeValue("white", "gray.800")}
+        color={useColorModeValue("gray.600", "white")}
+        minH={"60px"}
         py={{ base: 2 }}
         px={{ base: 4 }}
         borderBottom={1}
-        borderStyle={'solid'}
-        borderColor={useColorModeValue('gray.200', 'gray.900')}
-        align={'center'}
+        borderStyle={"solid"}
+        borderColor={useColorModeValue("gray.200", "gray.900")}
+        align={"center"}
       >
         <Flex
-          flex={{ base: 1, md: 'auto' }}
+          flex={{ base: 1, md: "auto" }}
           ml={{ base: -2 }}
-          display={{ base: 'flex', md: 'none' }}
+          display={{ base: "flex", md: "none" }}
         >
           <IconButton
             onClick={onToggle}
             icon={
               isOpen ? <CloseIcon w={3} h={3} /> : <HamburgerIcon w={5} h={5} />
             }
-            variant={'ghost'}
-            aria-label={'Toggle Navigation'}
+            variant={"ghost"}
+            aria-label={"Toggle Navigation"}
           />
         </Flex>
-        <Flex flex={{ base: 1 }} ml={5} align={"center"} justify={{ base: 'center', md: 'start' }}>
+        <Flex
+          flex={{ base: 1 }}
+          ml={5}
+          align={"center"}
+          justify={{ base: "center", md: "start" }}
+        >
           <Image
             boxSize="60px"
             objectFit="cover"
@@ -64,29 +69,24 @@ export const Navbar = () => {
             alt="logovete"
           />
 
-          <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
+          <Flex display={{ base: "none", md: "flex" }} ml={10}>
             <DesktopNav />
           </Flex>
         </Flex>
 
         <Stack
           flex={{ base: 1, md: 0 }}
-          justify={'flex-end'}
-          direction={'row'}
+          justify={"flex-end"}
+          direction={"row"}
           spacing={6}
+          fontSize={"2xl"}
         >
-          <Image
-            href={'https://www.instagram.com/veterinariasigismondi/?hl=es'}
-            src={
-              'https://images.vexels.com/media/users/3/137253/isolated/preview/90dd9f12fdd1eefb8c8976903944c026-logotipo-del-icono-de-facebook.png'
-            }
-          />
-          <Image
-            href={'https://www.instagram.com/veterinariasigismondi/?hl=es'}
-            src={
-              'https://assets.stickpng.com/images/580b57fcd9996e24bc43c521.png'
-            }
-          />
+          <Link href={"https://www.instagram.com/veterinariasigismondi/?hl=es"}>
+            <FaFacebook />
+          </Link>
+          <Link href={"https://www.instagram.com/veterinariasigismondi/?hl=es"}>
+            <AiFillInstagram />
+          </Link>
         </Stack>
       </Flex>
 
@@ -94,7 +94,7 @@ export const Navbar = () => {
         <MobileNav />
       </Collapse>
     </Box>
-  )
+  );
 }
 
 const DesktopNav = () => {
@@ -103,33 +103,35 @@ const DesktopNav = () => {
   const popoverContentBgColor = useColorModeValue('white', 'gray.800')
 
   return (
-    <Stack direction={'row'} spacing={4}>
+    <Stack direction={"row"} spacing={4}>
       {NAV_ITEMS.map((navItem) => (
         <Box key={navItem.label}>
-          <Popover trigger={'hover'} placement={'bottom-start'}>
+          <Popover trigger={"hover"} placement={"bottom-start"}>
             <PopoverTrigger>
-              <Link
-                p={2}
-                fontSize={'sm'}
-                fontWeight={500}
-                color={linkColor}
-                _hover={{
-                  textDecoration: 'none',
-                  color: linkHoverColor,
-                }}
-              >
-                <RouterLink to="/about">About</RouterLink>               
-              </Link>
+              <RouterLink to={navItem.route}>
+                <Link
+                  p={2}
+                  fontSize={"sm"}
+                  fontWeight={500}
+                  color={linkColor}
+                  _hover={{
+                    textDecoration: "none",
+                    color: linkHoverColor,
+                  }}
+                >
+                  {navItem.label}
+                </Link>
+              </RouterLink>
             </PopoverTrigger>
 
             {navItem.children && (
               <PopoverContent
                 border={0}
-                boxShadow={'xl'}
+                boxShadow={"xl"}
                 bg={popoverContentBgColor}
                 p={4}
-                rounded={'xl'}
-                minW={'sm'}
+                rounded={"xl"}
+                minW={"sm"}
               >
                 <Stack>
                   {navItem.children.map((child) => (
@@ -142,7 +144,7 @@ const DesktopNav = () => {
         </Box>
       ))}
     </Stack>
-  )
+  );
 }
 
 const DesktopSubNav = (NAV_ITEMS) => {
@@ -250,64 +252,67 @@ const MobileNavItem = (NAV_ITEMS) => {
 }
 
 const NAV_ITEMS = [
-
   {
-    label: 'Nosotros',
+    route: "about",
+    label: "Nosotros",
     children: [
       {
-        label: '¿Quienes Somos?',
-        subLabel: 'pipiri papu',
-        href: 'nosotros',
+        label: "¿Quienes Somos?",
+        subLabel: "pipiri papu",
+        href: "nosotros",
       },
       {
-        label: 'Nuestros Servicios',
-        subLabel: 'Los servicios que brindamos',
-        href: 'index',
+        label: "Nuestros Servicios",
+        subLabel: "Los servicios que brindamos",
+        href: "index",
       },
     ],
   },
   {
-    label: 'Ubicación',
-    href: 'https://www.google.com.ar/maps/dir//Chaco+801,+B7600BKQ+Mar+del+Plata,+Buenos+Aires,+Argentina/@-37.982938,-57.5634771,16z/data=!3m1!4b1!4m9!4m8!1m0!1m5!1m1!1s0x9584d95a18c9fcd9:0x9d2f9ec1205da2e9!2m2!1d-57.5590997!2d-37.9829465!3e2',
+    route: "",
+    label: "Ubicación",
+    href: "https://www.google.com.ar/maps/dir//Chaco+801,+B7600BKQ+Mar+del+Plata,+Buenos+Aires,+Argentina/@-37.982938,-57.5634771,16z/data=!3m1!4b1!4m9!4m8!1m0!1m5!1m1!1s0x9584d95a18c9fcd9:0x9d2f9ec1205da2e9!2m2!1d-57.5590997!2d-37.9829465!3e2",
   },
   {
-    label: 'Contacto',
+    route: "",
+    label: "Contacto",
     children: [
       {
-        label: 'Teléfono',
-        subLabel: 'Llamar a (0223)473-9018',
-        href: 'tel:02234739018',
+        label: "Teléfono",
+        subLabel: "Llamar a (0223)473-9018",
+        href: "tel:02234739018",
       },
       {
-        label: 'Celular',
-        subLabel: 'Llamar al (0223)156-800944',
-        href: 'tel:5492236800944',
+        label: "Celular",
+        subLabel: "Llamar al (0223)156-800944",
+        href: "tel:5492236800944",
       },
       {
-        label: 'WhatsApp',
-        subLabel: 'Enviar mensaje al (0223)156-800944',
-        href: 'https://api.whatsapp.com/send?phone=5492236800944',
+        label: "WhatsApp",
+        subLabel: "Enviar mensaje al (0223)156-800944",
+        href: "https://api.whatsapp.com/send?phone=5492236800944",
       },
       {
-        label: 'Email',
-        subLabel: 'Escribinos a unoelectromedicina@gmail.com',
-        href: 'mailto:unoelectromedicina@gmail.com',
-      }
-    ]
-  },
-  {
-    label: 'Banco de Sangre',
-    children: [
-      {
-        label: 'Donacion',
-        subLabel: 'Ayudanos realizando donaciones de sangre',
-        href: '#',
+        label: "Email",
+        subLabel: "Escribinos a unoelectromedicina@gmail.com",
+        href: "mailto:unoelectromedicina@gmail.com",
       },
-      {
-        label: 'Nuestros Donantes',
-        subLabel: 'Mira mira una conexion a la base de datos',
-        href: '#',
-      }
     ],
   },
-]
+  {
+    route: "bancods",
+    label: "Banco de Sangre",
+    children: [
+      {
+        label: "Donacion",
+        subLabel: "Ayudanos realizando donaciones de sangre",
+        href: "#",
+      },
+      {
+        label: "Nuestros Donantes",
+        subLabel: "Mira mira una conexion a la base de datos",
+        href: "#",
+      },
+    ],
+  },
+];
