@@ -136,11 +136,10 @@ import {
                 alt={"Hero Image2"}
                 fit={"cover"}
                 align={"center"}
-                left={"50px"}
                 w={"50%"}
                 h={"100%"}
                 src={
-                  "https://scontent.faep29-1.fna.fbcdn.net/v/t39.30808-6/244761205_6802173026521288_2224626546788383945_n.jpg?_nc_cat=110&ccb=1-5&_nc_sid=8bfeb9&_nc_ohc=ros1k_Q_3ZUAX8O0osk&_nc_ht=scontent.faep29-1.fna&oh=8c9811053ee81d51220655d711117e1b&oe=618A7FCA"
+                  "https://scontent.faep29-2.fna.fbcdn.net/v/t39.30808-6/244747671_6723526087719316_2708944382307389881_n.jpg?_nc_cat=107&ccb=1-5&_nc_sid=8bfeb9&_nc_ohc=YKUcn60LzsIAX8sCuRC&_nc_ht=scontent.faep29-2.fna&oh=f604df796a1482569fe6bb8b2c504bfb&oe=6186DD42"
                 }
               />
             </Box>
