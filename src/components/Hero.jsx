@@ -129,7 +129,7 @@ import {
                 w={"50%"}
                 h={"100%"}
                 src={
-                  "https://scontent.faep29-2.fna.fbcdn.net/v/t39.30808-6/244747671_6723526087719316_2708944382307389881_n.jpg?_nc_cat=107&ccb=1-5&_nc_sid=8bfeb9&_nc_ohc=YKUcn60LzsIAX8sCuRC&_nc_ht=scontent.faep29-2.fna&oh=f604df796a1482569fe6bb8b2c504bfb&oe=6186DD42"
+                  "/perrito.jpg"
                 }
               />
               <Image
@@ -139,7 +139,7 @@ import {
                 w={"50%"}
                 h={"100%"}
                 src={
-                  "https://scontent.faep29-2.fna.fbcdn.net/v/t39.30808-6/244747671_6723526087719316_2708944382307389881_n.jpg?_nc_cat=107&ccb=1-5&_nc_sid=8bfeb9&_nc_ohc=YKUcn60LzsIAX8sCuRC&_nc_ht=scontent.faep29-2.fna&oh=f604df796a1482569fe6bb8b2c504bfb&oe=6186DD42"
+                  "/perrito.jpg"
                 }
               />
             </Box>
